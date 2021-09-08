@@ -13,7 +13,7 @@ const ImagesSection = () => {
           <SmallImage src={mainImage} />
         </SmallImageContainer>
         <SmallImageContainer>
-          <SmallImage src={mainImage} />
+          <SmallImage src={mainImage} mirror={1} />
         </SmallImageContainer>
         <SmallImageContainer>
           <SmallImage src={mainImage} />
@@ -65,6 +65,7 @@ const SmallImageContainer = styled.div`
 const SmallImage = styled.img`
   width: 80px;
   height: 80px;
+  transform: ${(props) => (props.mirror ? "scaleX(-1)" : null)};
 `;
 
 export default ImagesSection;

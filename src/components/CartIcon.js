@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import { AiFillHeart } from "react-icons/ai";
 import { FaShoppingCart, FaUser } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { AppContext } from "../context/AppContext";
 
 const CartIcon = (props) => {
-  const { amount } = props;
+  const { cartItems } = useContext(AppContext);
   return (
     <StyledIconContainer>
       <StyledSingleIconContainer>
@@ -12,8 +14,10 @@ const CartIcon = (props) => {
         <StyledHeartIcon />
       </StyledSingleIconContainer>
       <StyledSingleIconContainer>
-        <StyledAmount>{amount}</StyledAmount>
-        <StyledCartIcon />
+        <Link to="/cart">
+          <StyledAmount>{cartItems.length}</StyledAmount>
+          <StyledCartIcon />
+        </Link>
       </StyledSingleIconContainer>
       <StyledSingleIconContainer>
         <StyledUserIcon />
@@ -35,6 +39,8 @@ const StyledSingleIconContainer = styled.div`
   justify-content: center;
   position: relative;
 `;
+
+const StyledLink = styled(Link)``;
 
 const StyledHeartIcon = styled(AiFillHeart)`
   color: white;

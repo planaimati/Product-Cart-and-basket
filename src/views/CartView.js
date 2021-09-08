@@ -1,7 +1,8 @@
 import React from "react";
+import CartTemplate from "../templates/CartTemplate";
 
 const CartView = () => {
-  return <div>hello from cart</div>;
+  return <CartTemplate></CartTemplate>;
 };
 
 export default CartView;

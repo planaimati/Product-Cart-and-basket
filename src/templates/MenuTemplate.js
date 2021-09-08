@@ -2,13 +2,16 @@ import React from "react";
 import styled from "styled-components";
 import CartIcon from "../components/CartIcon";
 import Catalog from "../components/Catalog";
+import { Link } from "react-router-dom";
 
 const MenuTemplate = () => {
   return (
     <StyledNav>
       <StyledNavContainer>
         <StyledLogoContainer>
-          <StyledLogo>LOGO</StyledLogo>
+          <StyledLink to="/">
+            <StyledLogo>LOGO</StyledLogo>
+          </StyledLink>
         </StyledLogoContainer>
         <StyledLine />
         <StyledMenuContainer>
@@ -39,6 +42,10 @@ const StyledNavContainer = styled.div`
   display: flex;
   align-items: center;
   margin: 0 auto 0 auto;
+`;
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
 `;
 
 const StyledMenuContainer = styled.div`

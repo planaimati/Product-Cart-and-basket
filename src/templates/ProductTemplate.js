@@ -1,11 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 import Product from "../components/ProductComponents/Product/Product";
+import Accesories from "../components/Accesories/Accesories";
+import Testimonials from "../components/Testimonials/Testimonials";
 
 const ProductTemplate = () => {
   return (
     <StyledMain>
       <Product />
+      <Testimonials />
+      <Accesories title="accesories"></Accesories>
     </StyledMain>
   );
 };

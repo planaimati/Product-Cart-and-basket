@@ -14,11 +14,12 @@ const Root = () => {
     <BrowserRouter>
       <GlobalStyle />
       <MenuView />
-      <FooterView />
+
       <Switch>
         <Route exact path="/" component={ProductView} />
         <Route exact path="/cart" component={CartView} />
       </Switch>
+      <FooterView />
     </BrowserRouter>
   );
 };
