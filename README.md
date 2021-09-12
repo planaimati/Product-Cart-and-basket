@@ -4,7 +4,7 @@
 
 ##How to build and run project:
 
--clone repository using command: git clone https://github.com/planaimati/Product-Cart-and-basket.git 
--install dependencies by using command: npm install  
--run react app by using command: npm start
+- clone repository using command: git clone https://github.com/planaimati/Product-Cart-and-basket.git 
+- install dependencies by using command: npm install  
+- run react app by using command: npm start
 
